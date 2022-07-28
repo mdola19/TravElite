@@ -165,18 +165,111 @@
         <!--Find Food-->
         <scene sceneID="QJt-NX-1Sb">
             <objects>
-                <viewController id="xjZ-6e-Soe" customClass="TripsView" customModule="TravElite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xjZ-6e-Soe" customClass="FindFoodMap" customModule="TravElite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UhC-xo-UIK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RvZ-Pe-FFt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xjZ-6e-Soe" id="py9-rC-F21"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPz-Nc-bnP">
+                                <rect key="frame" x="20" y="64" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lQp-J4-Cdl"/>
+                                </constraints>
+                                <color key="tintColor" red="0.18260624440000001" green="0.86666673419999996" blue="0.80022992110000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Input Your Route">
+                                    <fontDescription key="titleFontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.2078431845" green="0.20784312490000001" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="revealInputScreen:" destination="xjZ-6e-Soe" eventType="touchUpInside" id="JoK-GA-vv3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xQk-cI-M5f"/>
                         <color key="backgroundColor" red="0.22085671910305615" green="0.22085671910305615" blue="0.22085671910305615" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="RvZ-Pe-FFt" secondAttribute="trailing" constant="-20" id="Lzp-sW-Ocm"/>
+                            <constraint firstItem="sPz-Nc-bnP" firstAttribute="leading" secondItem="xQk-cI-M5f" secondAttribute="leading" constant="20" id="PPK-iL-JBp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RvZ-Pe-FFt" secondAttribute="bottom" id="PTv-ld-4m0"/>
+                            <constraint firstItem="RvZ-Pe-FFt" firstAttribute="leading" secondItem="UhC-xo-UIK" secondAttribute="leadingMargin" constant="-20" id="Sg7-6F-qFc"/>
+                            <constraint firstItem="sPz-Nc-bnP" firstAttribute="top" secondItem="xQk-cI-M5f" secondAttribute="top" constant="20" id="hEn-jW-Cmf"/>
+                            <constraint firstItem="xQk-cI-M5f" firstAttribute="trailing" secondItem="sPz-Nc-bnP" secondAttribute="trailing" constant="20" id="og6-ot-g9B"/>
+                            <constraint firstItem="RvZ-Pe-FFt" firstAttribute="top" secondItem="UhC-xo-UIK" secondAttribute="topMargin" constant="-44" id="zmc-hA-T4E"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Food" image="icons8-search-30" id="sne-CS-fvD"/>
+                    <connections>
+                        <outlet property="mapView" destination="RvZ-Pe-FFt" id="Oij-ro-yq7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPF-4r-uNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476.81159420289856" y="649.55357142857144"/>
+        </scene>
+        <!--Input Route-->
+        <scene sceneID="M6m-oY-X2W">
+            <objects>
+                <viewController storyboardIdentifier="input_route" id="YHM-Z8-3Ve" customClass="InputRoute" customModule="TravElite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q2L-1R-Fdr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Your Route" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCN-Zq-LqI">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2pR-qd-p4n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="30"/>
+                                <color key="textColor" red="0.18260624440000001" green="0.86666673419999996" blue="0.80022992110000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oe3-a1-yhv">
+                                <rect key="frame" x="20" y="144" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Mra-Tf-hdJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="v6n-JW-fWZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Starting Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OqS-Ub-zGF">
+                                <rect key="frame" x="20" y="256" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SDX-FM-Xm5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k3W-F8-5Mc"/>
+                        <color key="backgroundColor" red="0.2078431845" green="0.20784312490000001" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QCN-Zq-LqI" firstAttribute="top" secondItem="k3W-F8-5Mc" secondAttribute="top" constant="20" id="1Yb-wa-iYv"/>
+                            <constraint firstItem="k3W-F8-5Mc" firstAttribute="trailing" secondItem="QCN-Zq-LqI" secondAttribute="trailing" constant="20" id="5Vg-TQ-nkY"/>
+                            <constraint firstItem="OqS-Ub-zGF" firstAttribute="top" secondItem="QCN-Zq-LqI" secondAttribute="bottom" constant="142" id="9xh-d7-IYd"/>
+                            <constraint firstItem="Oe3-a1-yhv" firstAttribute="top" secondItem="QCN-Zq-LqI" secondAttribute="bottom" constant="30" id="Exl-us-UnY"/>
+                            <constraint firstItem="Oe3-a1-yhv" firstAttribute="leading" secondItem="k3W-F8-5Mc" secondAttribute="leading" constant="20" id="QTH-6d-MBe"/>
+                            <constraint firstItem="OqS-Ub-zGF" firstAttribute="leading" secondItem="k3W-F8-5Mc" secondAttribute="leading" constant="20" id="Tku-1x-1dC"/>
+                            <constraint firstItem="QCN-Zq-LqI" firstAttribute="leading" secondItem="k3W-F8-5Mc" secondAttribute="leading" constant="20" id="n4Q-gz-MiT"/>
+                            <constraint firstItem="k3W-F8-5Mc" firstAttribute="trailing" secondItem="OqS-Ub-zGF" secondAttribute="trailing" constant="20" id="pyQ-Cp-ak1"/>
+                            <constraint firstItem="k3W-F8-5Mc" firstAttribute="trailing" secondItem="Oe3-a1-yhv" secondAttribute="trailing" constant="20" id="xjn-G8-kOT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="destinationField" destination="Oe3-a1-yhv" id="W0b-pG-eY0"/>
+                        <outlet property="startingLocationField" destination="OqS-Ub-zGF" id="Rcb-jz-nxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcN-H0-OCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="650"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aqo-gL-icV">

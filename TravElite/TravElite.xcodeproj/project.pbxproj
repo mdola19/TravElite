@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11B88C128919B130098C1A7 /* FindFoodMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B88C028919B130098C1A7 /* FindFoodMap.swift */; };
+		C11B88C32891E5E80098C1A7 /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B88C22891E5E80098C1A7 /* AddressManager.swift */; };
 		C18973F3288AF5250051A9F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18973F2288AF5250051A9F9 /* AppDelegate.swift */; };
 		C18973F5288AF5250051A9F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18973F4288AF5250051A9F9 /* SceneDelegate.swift */; };
 		C18973F7288AF5250051A9F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18973F6288AF5250051A9F9 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C11B88C028919B130098C1A7 /* FindFoodMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFoodMap.swift; sourceTree = "<group>"; };
+		C11B88C22891E5E80098C1A7 /* AddressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManager.swift; sourceTree = "<group>"; };
 		C18973EF288AF5250051A9F9 /* TravElite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravElite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18973F2288AF5250051A9F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C18973F4288AF5250051A9F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +68,13 @@
 				C18973F4288AF5250051A9F9 /* SceneDelegate.swift */,
 				C18973F6288AF5250051A9F9 /* ViewController.swift */,
 				C1C0B897288F17B700F5F124 /* CustomTableViewCell.swift */,
+				C11B88C028919B130098C1A7 /* FindFoodMap.swift */,
 				C18973F8288AF5250051A9F9 /* Main.storyboard */,
 				C18973FB288AF5280051A9F9 /* Assets.xcassets */,
 				C18973FD288AF5280051A9F9 /* LaunchScreen.storyboard */,
 				C1897400288AF5280051A9F9 /* Info.plist */,
 				C19724AD288D958C001AA602 /* Poppins-Font-2 */,
+				C11B88C22891E5E80098C1A7 /* AddressManager.swift */,
 			);
 			path = TravElite;
 			sourceTree = "<group>";
@@ -145,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11B88C32891E5E80098C1A7 /* AddressManager.swift in Sources */,
 				C18973F7288AF5250051A9F9 /* ViewController.swift in Sources */,
+				C11B88C128919B130098C1A7 /* FindFoodMap.swift in Sources */,
 				C18973F3288AF5250051A9F9 /* AppDelegate.swift in Sources */,
 				C1C0B898288F17B700F5F124 /* CustomTableViewCell.swift in Sources */,
 				C18973F5288AF5250051A9F9 /* SceneDelegate.swift in Sources */,
