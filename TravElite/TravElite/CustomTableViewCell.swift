@@ -10,7 +10,7 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
 
     lazy var backView: UIView = {
-        let view = UIView(frame: CGRect(x: 10, y: 8, width: self.frame.width + 50, height: 110))
+        let view = UIView(frame: CGRect(x: 30, y: 8, width: 365, height: 110))
         view.backgroundColor = UIColor.cyan.withAlphaComponent(0.35)
         
         return view
